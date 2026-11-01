@@ -1,0 +1,2865 @@
+
+/* =========================================================
+   BharatYatra - Destination Page
+========================================================= */
+
+.logo{
+  margin-left: 30px;
+}
+
+
+.destination-page {
+  min-height: 100vh;
+  width: 100%;
+  background: #46e4cfa6;
+  color: #111916;
+  overflow-x: hidden;
+}
+
+.destination-main {
+  width: min(1440px, calc(100% - 64px));
+  margin: 0 auto;
+  padding-top: 45px;
+}
+
+/* =========================================================
+   Destination Header
+========================================================= */
+
+.destination-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e2e8e5;
+  backdrop-filter: blur(12px);
+}
+
+.destination-header-inner {
+  width: min(1440px, calc(100% - 64px));
+  margin: 0 auto;
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* =========================================================
+   Loading / Error
+========================================================= */
+
+.destination-state-screen {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(20, 148, 71, 0.08), transparent 30%),
+    #f5f7f6;
+}
+
+.destination-message-card {
+  width: min(500px, 100%);
+  padding: 20px 34px;
+  box-sizing: border-box;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #e0e8e4;
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(25, 45, 35, 0.08);
+}
+
+.destination-message-card h2 {
+  margin: 18px 0 8px;
+  font-size: 25px;
+}
+
+.destination-message-card p {
+  margin: 0;
+  color: #6b7772;
+  line-height: 1.6;
+}
+
+.destination-error-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff1ef;
+  color: #c63d2f;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.destination-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.destination-actions button {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 11px;
+  background: #159447;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.destination-actions button:hover {
+  background: #107c3a;
+}
+
+.destination-actions button.secondary {
+  background: #eef3f0;
+  color: #274238;
+}
+
+.destination-actions button.secondary:hover {
+  background: #e2eae6;
+}
+
+/* =========================================================
+   State Hero
+========================================================= */
+
+.state-hero {
+  position: relative;
+  min-height: 245px;
+  display: flex;
+  align-items: center;
+  padding: 42px 48px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  overflow: hidden;
+  background:
+    linear-gradient(100deg, rgba(7, 37, 25, 0.90), rgba(17, 76, 49, 0.72), rgba(17, 76, 49, 0.34)),
+    linear-gradient(135deg, #173d2c, #4d8063);
+  box-shadow: 0 15px 40px rgba(22, 48, 36, 0.12);
+}
+
+.state-hero > div {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.state-hero small {
+  color: #bde8ca;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.state-hero h2 {
+  margin: 10px 0 10px;
+  color: #fff;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.08;
+  font-weight: 500;
+}
+
+.state-hero h2 strong {
+  font-weight: 800;
+}
+
+.state-hero p {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.state-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.state-meta span {
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.09);
+  color: #fff;
+  font-size: 12px;
+}
+
+/* =========================================================
+   Quick Search
+========================================================= */
+
+.destination-quick-search{
+  margin-top: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e0e7e3;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(25, 45, 35, 0.05);
+}
+
+.destination-inline-search {
+  width: 100%;
+}
+
+.destination-inline-search-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 50px;
+  border: 1px solid #a7aba9;
+  border-radius: 20px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.destination-inline-search-wrapper:focus-within {
+  border-color: #159447;
+  box-shadow: 0 0 0 3px rgba(21, 148, 71, 0.09);
+}
+
+.destination-inline-input {
+  flex: 1;
+  min-width: 0;
+  height: 50px;
+  border: 0;
+  outline: 0;
+  padding: 0 14px;
+  background: transparent;
+  color: #17221f;
+  font-size: 14px;
+}
+
+.destination-inline-icon {
+  margin-left: 15px;
+  color: #73817b;
+}
+
+.destination-inline-button {
+  height: 40px;
+  margin-right: 5px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 9px;
+  background: #159447;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.destination-inline-button:hover {
+  background: #107c3a;
+}
+
+.destination-search-suggestions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 13px;
+}
+
+.destination-search-suggestions > span {
+  color: #7a8781;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.destination-search-suggestions button {
+  padding: 7px 11px;
+  border: 1px solid #dce6e1;
+  border-radius: 999px;
+  background: #f7faf8;
+  color: #315344;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.destination-search-suggestions button:hover {
+  border-color: #159447;
+  background: #eaf7ef;
+  color: #107c3a;
+}
+
+/* =========================================================
+   Sections
+========================================================= */
+
+.destination-section,
+.location-section {
+  margin-top: 42px;
+}
+
+.destination-section > *:first-child,
+.location-section > *:first-child {
+  margin-bottom: 20px;
+}
+
+/* SectionHeading common styles */
+.destination-section h2,
+.location-section h2 {
+  color: #18231f;
+}
+
+.destination-section p,
+.location-section p {
+  color: #6f7c76;
+}
+
+/* =========================================================
+   City Cards
+========================================================= */
+
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.city-grid > * {
+  min-width: 0;
+}
+
+/* Component-safe card styling */
+.city-grid article,
+.city-grid .destination-card {
+  min-height: 175px;
+  border: 1px solid #e0e8e4;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 7px 22px rgba(25, 45, 35, 0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.city-grid article:hover,
+.city-grid .destination-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(25, 45, 35, 0.09);
+}
+
+/* =========================================================
+   Tourist Places
+========================================================= */
+
+.place-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.place-grid > * {
+  min-width: 0;
+}
+
+.place-grid article,
+.place-grid .place-card {
+  overflow: hidden;
+  border: 1px solid #e0e8e4;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 7px 22px rgba(25, 45, 35, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.place-grid article:hover,
+.place-grid .place-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(25, 45, 35, 0.09);
+}
+
+/* =========================================================
+   Food + Stays
+========================================================= */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 24px;
+  box-sizing: border-box;
+  border: 1px solid #e0e8e4;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 7px 22px rgba(25, 45, 35, 0.05);
+}
+
+.feature-card > span {
+  flex: 0 0 52px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #eaf7ef;
+  font-size: 25px;
+}
+
+.feature-card small {
+  color: #159447;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.feature-card h3 {
+  margin: 5px 0 7px;
+  font-size: 18px;
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   Map
+========================================================= */
+
+.destination-section .map-view,
+.destination-section .map-container,
+.destination-section iframe {
+  width: 100%;
+  min-height: 410px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.destination-section iframe {
+  display: block;
+  border: 0;
+}
+
+/* =========================================================
+   Live Location
+========================================================= */
+
+.location-section {
+  padding: 0;
+}
+
+.location-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px;
+  border: 1px solid #dfe8e3;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 7px 22px rgba(25, 45, 35, 0.05);
+}
+
+.location-card > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.location-icon {
+  width: 50px;
+  height: 50px;
+  flex: 0 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #eaf7ef;
+  font-size: 23px;
+}
+
+.location-card h3 {
+  margin: 0 0 5px;
+  font-size: 17px;
+}
+
+.location-card p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.location-card button {
+  min-height: 42px;
+  padding: 0 17px;
+  border: 0;
+  border-radius: 10px;
+  background: #159447;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.location-card button:hover {
+  background: #107c3a;
+}
+
+.location-card button.stop {
+  background: #c63d2f;
+}
+
+.location-card button.stop:hover {
+  background: #a93227;
+}
+
+.location-card button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.coordinates {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.coordinates > div {
+  padding: 14px 16px;
+  border: 1px solid #e2e9e5;
+  border-radius: 12px;
+  background: #fff;
+  color: #77837e;
+  font-size: 12px;
+}
+
+.coordinates strong {
+  display: block;
+  margin-top: 5px;
+  color: #20372d;
+  font-size: 14px;
+}
+
+.location-error {
+  margin-top: 12px;
+  padding: 13px 15px;
+  border: 1px solid #f1d4d0;
+  border-radius: 11px;
+  background: #fff5f3;
+  color: #a93227;
+  font-size: 13px;
+}
+
+/* =========================================================
+   ROUTE MODE SELECTOR
+========================================================= */
+
+.route-mode-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 20px;
+  border-bottom: 1px solid #e2e8e5;
+  background: #fafcfb;
+}
+
+.route-mode-title {
+  color: #52635b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.route-mode-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.route-mode {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 13px;
+  border: 1px solid #d8e2dd;
+  border-radius: 9px;
+  background: #fff;
+  color: #52635b;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.route-mode:hover {
+  border-color: #159447;
+  color: #159447;
+}
+
+.route-mode.active {
+  border-color: #159447;
+  background: #159447;
+  color: #fff;
+}
+
+/* =========================================================
+   ROUTE MAP
+========================================================= */
+
+.live-route-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #dfe8e3;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(25, 45, 35, 0.05);
+}
+
+.route-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 20px;
+  border-bottom: 1px solid #e2e8e5;
+}
+
+.route-map-header h3 {
+  margin: 4px 0 0;
+  color: #18231f;
+}
+
+.selected-route-label {
+  display: block;
+  color: #159447;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.route-loading {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #ecfdf5;
+  color: #15803d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.route-error {
+  margin: 12px 20px 0;
+  padding: 10px 12px;
+  border-radius: 9px;
+  background: #fff1ef;
+  color: #b42318;
+  font-size: 14px;
+}
+
+.route-map {
+  width: 100%;
+}
+
+.route-map .leaflet-container {
+  width: 100%;
+  min-height: 500px;
+}
+
+.route-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #e2e8e5;
+}
+
+.route-info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  border-right: 1px solid #e2e8e5;
+}
+
+.route-info-item:last-child {
+  border-right: 0;
+}
+
+.route-info-item > span {
+  font-size: 24px;
+}
+
+.route-info-item small {
+  display: block;
+  margin-bottom: 3px;
+  color: #6b7772;
+}
+
+.route-info-item strong {
+  color: #18231f;
+}
+
+.live-user-marker,
+.destination-marker {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.live-user-marker-inner,
+.destination-marker-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+  font-size: 21px;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .route-mode-selector {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .route-mode-buttons {
+    width: 100%;
+  }
+
+  .route-mode {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .route-map-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .route-info {
+    grid-template-columns: 1fr;
+  }
+
+  .route-info-item {
+    border-right: 0;
+    border-bottom: 1px solid #e2e8e5;
+  }
+
+  .route-info-item:last-child {
+    border-bottom: 0;
+  }
+
+  .route-map .leaflet-container {
+    min-height: 400px;
+  }
+}
+
+
+/* =========================================================
+   Weather
+========================================================= */
+
+.destination-section .weather-card {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px;
+  border: 1px solid #dfe8e3;
+  border-radius: 19px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(25, 45, 35, 0.05);
+}
+
+.weather-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.weather-label {
+  display: block;
+  color: #159447;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.weather-header h3 {
+  margin: 5px 0 0;
+  font-size: 23px;
+}
+
+.weather-icon {
+  font-size: 40px;
+}
+
+.weather-current {
+  margin-top: 20px;
+}
+
+.weather-temperature {
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.weather-condition {
+  margin-top: 8px;
+  color: #697770;
+  font-size: 14px;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 23px;
+}
+
+.weather-detail {
+  padding: 14px;
+  border-radius: 12px;
+  background: #f5f8f6;
+}
+
+.weather-detail span {
+  display: block;
+  color: #7b8782;
+  font-size: 11px;
+}
+
+.weather-detail strong {
+  display: block;
+  margin-top: 5px;
+  color: #243a31;
+  font-size: 15px;
+}
+
+.weather-forecast {
+  margin-top: 25px;
+}
+
+.weather-forecast h4 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.forecast-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.forecast-item {
+  display: grid;
+  grid-template-columns: 80px 1fr 120px;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 13px;
+  border-radius: 10px;
+  background: #f7f9f8;
+  color: #51605a;
+  font-size: 12px;
+}
+
+.forecast-item strong {
+  color: #263b32;
+  text-align: right;
+}
+
+.weather-source {
+  margin-top: 14px;
+  color: #929c98;
+  font-size: 10px;
+}
+
+/* =========================================================
+   Generic component cards
+========================================================= */
+
+.destination-page button {
+  font-family: inherit;
+}
+
+.destination-page input {
+  font-family: inherit;
+}
+
+.destination-page img {
+  max-width: 100%;
+}
+
+/* =========================================================
+   Footer
+========================================================= */
+
+.destination-footer {
+  margin-top: 55px;
+  padding: 26px 10px 10px;
+  border-top: 1px solid #dfe7e3;
+  text-align: center;
+  color: #82908a;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   Responsive
+========================================================= */
+
+@media (max-width: 1150px) {
+  .city-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .place-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 850px) {
+  .destination-main,
+  .destination-header-inner {
+    width: min(100% - 32px, 720px);
+  }
+
+  .state-hero {
+    padding: 34px 28px;
+  }
+
+  .city-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weather-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .location-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .destination-main,
+  .destination-header-inner {
+    width: calc(100% - 24px);
+  }
+
+  .destination-main {
+    padding-top: 15px;
+  }
+
+  .state-hero {
+    min-height: 220px;
+    padding: 28px 22px;
+    border-radius: 18px;
+  }
+
+  .state-hero h2 {
+    font-size: 31px;
+  }
+
+  .state-hero p {
+    font-size: 13px;
+  }
+
+  .destination-quick-search {
+    padding: 14px;
+  }
+
+  .destination-inline-search-wrapper {
+    flex-wrap: wrap;
+    padding: 5px;
+  }
+
+  .destination-inline-input {
+    width: calc(100% - 45px);
+  }
+
+  .destination-inline-button {
+    width: 100%;
+    margin: 5px 0 0;
+  }
+
+  .city-grid,
+  .place-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weather-details {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .forecast-item {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .forecast-item strong {
+    grid-column: 2;
+    text-align: left;
+  }
+
+  .coordinates {
+    grid-template-columns: 1fr;
+  }
+
+  .location-card > div:first-child {
+    align-items: flex-start;
+  }
+
+  .destination-actions {
+    flex-direction: column;
+  }
+
+  .destination-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .weather-details {
+    grid-template-columns: 1fr;
+  }
+
+  .state-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* =========================================================
+   BharatYatra PREMIUM DESTINATION UI OVERRIDES
+   Added without removing the existing destination design.
+========================================================= */
+
+/* Page background */
+.destination-page {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(21,148,71,.055), transparent 28%),
+    linear-gradient(180deg, #f7faf8 0%, #f2f6f4 100%);
+}
+
+/* Hero — more premium */
+.state-hero {
+  min-height: 285px;
+  padding: 48px 54px;
+  border: 1px solid rgba(255,255,255,.10);
+  background:
+    radial-gradient(circle at 88% 18%, rgba(76,201,126,.24), transparent 24%),
+    radial-gradient(circle at 70% 100%, rgba(8,35,56,.36), transparent 38%),
+    linear-gradient(120deg, #062b1d 0%, #0d5c36 55%, #2c7652 100%);
+  box-shadow: 0 24px 55px rgba(9,50,31,.16);
+}
+
+.state-hero::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  right: -65px;
+  top: -85px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 50%;
+  box-shadow: 0 0 0 30px rgba(255,255,255,.025),
+              0 0 0 60px rgba(255,255,255,.018);
+}
+
+.state-hero::after {
+  content: "INDIA";
+  position: absolute;
+  right: 42px;
+  bottom: 20px;
+  color: rgba(255,255,255,.055);
+  font-size: 88px;
+  font-weight: 900;
+  letter-spacing: 8px;
+  pointer-events: none;
+}
+
+.state-hero h2 {
+  font-size: clamp(38px, 4.5vw, 58px);
+  letter-spacing: -1.2px;
+}
+
+.state-hero p {
+  max-width: 680px;
+  font-size: 14px;
+}
+
+/* Search becomes floating premium bar */
+.destination-quick-search {
+  position: relative;
+  z-index: 5;
+  margin: -30px 32px 0;
+  padding: 10px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.96);
+  border: 1px solid rgba(215,228,220,.9);
+  box-shadow: 0 18px 45px rgba(18,48,34,.12);
+}
+
+.destination-quick-search .component-search-bar {
+  min-height: 62px;
+  border: 0;
+  box-shadow: none;
+}
+
+.destination-quick-search .component-search-bar input {
+  font-size: 14px;
+}
+
+/* Section rhythm */
+.destination-section,
+.location-section {
+  margin-top: 54px;
+}
+
+/* Modern city cards */
+.city-grid {
+  gap: 20px;
+}
+
+.city-grid > * {
+  position: relative;
+  min-height: 185px;
+  border-radius: 20px !important;
+  border: 1px solid #e0e9e4 !important;
+  background: linear-gradient(145deg, #fff, #f7faf8) !important;
+  box-shadow: 0 10px 30px rgba(17,48,32,.055) !important;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease !important;
+}
+
+.city-grid > *::after {
+  content: "→";
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  color: #159447;
+  font-size: 18px;
+  font-weight: 800;
+  opacity: .7;
+}
+
+.city-grid > *:hover {
+  transform: translateY(-7px) !important;
+  border-color: #b9d8c5 !important;
+  box-shadow: 0 22px 45px rgba(17,48,32,.12) !important;
+}
+
+/* Actual place cards */
+.place-grid {
+  gap: 22px;
+}
+
+.place-grid > * {
+  min-height: 150px;
+  position: relative;
+  border-radius: 20px !important;
+  border: 1px solid #e0e9e4 !important;
+  background: linear-gradient(145deg, #ffffff, #f8fbf9) !important;
+  box-shadow: 0 9px 28px rgba(17,48,32,.055) !important;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease !important;
+}
+
+.place-grid > *:hover {
+  transform: translateY(-6px) !important;
+  border-color: #b9d8c5 !important;
+  box-shadow: 0 22px 48px rgba(17,48,32,.13) !important;
+}
+
+/* Food / Stay distinction using section position */
+.destination-section:has(.place-grid) .place-grid > * {
+  overflow: hidden;
+}
+
+.destination-section:has(.place-grid) .place-grid > *::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #159447, #76c79a);
+  opacity: .85;
+}
+
+/* Empty state */
+.destination-section .component-empty-state {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px dashed #cbdcd2;
+  border-radius: 20px;
+  background: rgba(255,255,255,.78);
+}
+
+/* Map */
+.destination-section .map-view,
+.destination-section .map-container,
+.destination-section iframe {
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(17,48,32,.10);
+  border: 1px solid #dce7e1;
+}
+
+/* Location */
+.location-card {
+  border-radius: 20px;
+  padding: 24px;
+  background: linear-gradient(145deg, #fff, #f8fbf9);
+  box-shadow: 0 12px 32px rgba(17,48,32,.065);
+  transition: .2s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(17,48,32,.09);
+}
+
+.location-icon {
+  box-shadow: inset 0 0 0 1px rgba(21,148,71,.08);
+}
+
+/* Weather */
+.destination-section .weather-card {
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(21,148,71,.10), transparent 25%),
+    linear-gradient(145deg, #fff, #f5faf7);
+  box-shadow: 0 15px 38px rgba(17,48,32,.075);
+}
+
+.weather-temperature {
+  color: #123b28;
+}
+
+/* =========================================================
+   Budget Planner — premium card
+========================================================= */
+
+.budget-planner {
+  position: relative;
+  overflow: hidden;
+  padding: 30px !important;
+  border: 1px solid #dce8e1 !important;
+  border-radius: 24px !important;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(21,148,71,.14), transparent 25%),
+    linear-gradient(145deg, #ffffff 0%, #f4faf6 100%) !important;
+  box-shadow: 0 20px 50px rgba(14,53,32,.09) !important;
+}
+
+.budget-planner::before {
+  content: "₹";
+  position: absolute;
+  right: 28px;
+  bottom: -62px;
+  color: rgba(21,148,71,.045);
+  font-size: 190px;
+  line-height: 1;
+  font-weight: 900;
+  pointer-events: none;
+}
+
+.budget-planner::after {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  right: -85px;
+  top: -90px;
+  border: 1px solid rgba(21,148,71,.10);
+  border-radius: 50%;
+}
+
+.budget-planner .component-section-heading {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 24px !important;
+}
+
+.budget-planner .component-section-heading h2 {
+  font-size: 28px;
+}
+
+.budget-planner .component-section-heading > strong {
+  min-width: 145px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 14px 18px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #159447, #0c7035);
+  color: white;
+  font-size: 20px;
+  box-shadow: 0 12px 26px rgba(21,148,71,.20);
+}
+
+.budget-grid {
+  position: relative;
+  z-index: 2;
+  gap: 16px !important;
+}
+
+.budget-grid label {
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid #e1ebe5;
+  border-radius: 15px;
+  background: rgba(255,255,255,.78);
+  box-shadow: 0 5px 16px rgba(17,48,32,.035);
+}
+
+.budget-grid input {
+  margin-top: 2px;
+  background: #fff;
+  border: 1px solid #d6e3db;
+  border-radius: 11px;
+  height: 46px;
+  font-weight: 650;
+}
+
+.budget-planner .primary-component-button {
+  position: relative;
+  z-index: 2;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #159447, #0b7035);
+}
+
+/* =========================================================
+   Trip Planner — premium card
+========================================================= */
+
+.trip-planner-component {
+  position: relative;
+  overflow: hidden;
+  padding: 30px !important;
+  border: 1px solid #dce8e1 !important;
+  border-radius: 24px !important;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(21,148,71,.11), transparent 28%),
+    linear-gradient(145deg, #fff, #f6faf8) !important;
+  box-shadow: 0 20px 50px rgba(14,53,32,.085) !important;
+}
+
+.trip-planner-component::before {
+  content: "MY TRIP";
+  position: absolute;
+  right: 26px;
+  top: 26px;
+  color: rgba(13,113,53,.055);
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.trip-planner-component::after {
+  content: "✈";
+  position: absolute;
+  right: 32px;
+  bottom: 8px;
+  color: rgba(21,148,71,.065);
+  font-size: 100px;
+  transform: rotate(-12deg);
+}
+
+.trip-planner-component h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 27px !important;
+  letter-spacing: -.4px;
+}
+
+.trip-planner-component > p {
+  position: relative;
+  z-index: 2;
+}
+
+.trip-planner-row {
+  position: relative;
+  z-index: 2;
+  gap: 16px !important;
+}
+
+.trip-planner-component label {
+  padding: 15px;
+  box-sizing: border-box;
+  border: 1px solid #e1ebe5;
+  border-radius: 15px;
+  background: rgba(255,255,255,.80);
+}
+
+.trip-planner-component input {
+  margin-top: 2px;
+  height: 46px;
+  border-radius: 11px;
+  border-color: #d6e3db;
+  background: #fff;
+}
+
+.trip-planner-component > button {
+  position: relative;
+  z-index: 2;
+  min-height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #159447, #0b7035);
+}
+
+/* =========================================================
+   AI Assistant — premium chat window
+========================================================= */
+
+.chatbot {
+  width: min(900px, 100%) !important;
+  border: 1px solid #dce8e1 !important;
+  border-radius: 24px !important;
+  box-shadow: 0 22px 60px rgba(10,42,26,.12) !important;
+}
+
+.chatbot-header {
+  min-height: 76px;
+  box-sizing: border-box;
+  padding: 16px 21px !important;
+  background:
+    radial-gradient(circle at 88% 20%, rgba(74,196,119,.24), transparent 25%),
+    linear-gradient(135deg, #062b1d, #0d7135) !important;
+}
+
+.chatbot-header > span {
+  width: 49px;
+  height: 49px;
+  border-radius: 15px;
+  background: rgba(255,255,255,.14);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+}
+
+.chatbot-header h3 {
+  font-size: 17px !important;
+}
+
+.chatbot-messages {
+  height: 330px !important;
+  padding: 22px !important;
+  background:
+    radial-gradient(circle at 8% 8%, rgba(21,148,71,.045), transparent 25%),
+    linear-gradient(180deg, #f7faf8, #f3f7f5) !important;
+}
+
+.chat-message {
+  max-width: min(76%, 580px);
+  padding: 12px 15px;
+  border-radius: 16px;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.chat-message.assistant {
+  border: 1px solid #e0e9e4;
+  border-top-left-radius: 5px;
+  box-shadow: 0 6px 16px rgba(17,48,32,.045);
+}
+
+.chat-message.user {
+  border-top-right-radius: 5px;
+  box-shadow: 0 7px 17px rgba(21,148,71,.17);
+}
+
+.chatbot-input {
+  padding: 14px !important;
+  background: #fff;
+}
+
+.chatbot-input input {
+  height: 47px !important;
+  border-radius: 12px !important;
+  border-color: #d7e3dc !important;
+}
+
+.chatbot-input button {
+  min-width: 82px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #159447, #0d7135);
+  box-shadow: 0 7px 17px rgba(21,148,71,.16);
+}
+
+/* Section heading polish */
+.destination-section > .component-section-heading h2,
+.location-section > .component-section-heading h2 {
+  letter-spacing: -.6px;
+}
+
+.destination-section > .component-section-heading small,
+.location-section > .component-section-heading small {
+  font-size: 10px;
+}
+
+/* Mobile */
+@media (max-width: 850px) {
+  .destination-quick-search {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .state-hero::after {
+    right: 20px;
+    font-size: 55px;
+  }
+
+  .budget-planner,
+  .trip-planner-component {
+    padding: 22px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .state-hero {
+    min-height: 245px;
+    padding: 32px 24px;
+  }
+
+  .state-hero h2 {
+    font-size: 34px;
+  }
+
+  .destination-quick-search {
+    margin-top: -18px;
+  }
+
+  .budget-planner .component-section-heading > strong {
+    width: 100%;
+  }
+
+  .chat-message {
+    max-width: 88%;
+  }
+}
+
+/* =========================================================
+   FINAL BHARATYATRA DESTINATION CSS FIX
+   Matches the actual Destination.jsx + SearchBar component.
+   ========================================================= */
+
+/* ---------- Global box sizing ---------- */
+.destination-page,
+.destination-page * {
+  box-sizing: border-box;
+}
+
+.destination-page {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(21, 148, 71, .055), transparent 28%),
+    linear-gradient(180deg, #f7faf8 0%, #f2f6f4 100%);
+  color: #17221f;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ---------- Top destination header ----------
+   Destination.jsx uses .destination-component-header,
+   not .destination-header.
+   */
+.destination-page .destination-component-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  min-height: 76px;
+  padding: 12px 38px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(255, 255, 255, .94);
+  border-bottom: 1px solid #e1e9e5;
+  box-shadow: 0 5px 22px rgba(20, 50, 35, .055);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.destination-page .destination-component-header > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+.destination-page .destination-component-header small {
+  color: #159447;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.destination-page .destination-component-header h1 {
+  margin: 0;
+  color: #10251c;
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.destination-page .back-button {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #d9e5df;
+  border-radius: 12px;
+  background: #f7faf8;
+  color: #19392d;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.destination-page .back-button:hover {
+  background: #eaf7ef;
+  border-color: #a9d3ba;
+  color: #087f52;
+  transform: translateX(-2px);
+}
+
+/* ---------- Main width ---------- */
+.destination-page .destination-main {
+  width: min(1440px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 45px 0 70px;
+}
+
+/* ---------- Hero ---------- */
+.destination-page .state-hero {
+  position: relative;
+  min-height: 285px;
+  display: flex;
+  align-items: center;
+  padding: 48px 54px;
+  overflow: hidden;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(76, 201, 126, .24), transparent 24%),
+    radial-gradient(circle at 70% 100%, rgba(8, 35, 56, .36), transparent 38%),
+    linear-gradient(120deg, #062b1d 0%, #0d5c36 55%, #2c7652 100%);
+  box-shadow: 0 24px 55px rgba(9, 50, 31, .16);
+}
+
+.destination-page .state-hero::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  right: -65px;
+  top: -85px;
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 30px rgba(255, 255, 255, .025),
+    0 0 0 60px rgba(255, 255, 255, .018);
+}
+
+.destination-page .state-hero::after {
+  content: "INDIA";
+  position: absolute;
+  right: 42px;
+  bottom: 20px;
+  color: rgba(255, 255, 255, .055);
+  font-size: 88px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: 8px;
+  pointer-events: none;
+}
+
+.destination-page .state-hero > div {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+}
+
+.destination-page .state-hero small {
+  color: #bde8ca;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+}
+
+.destination-page .state-hero h2 {
+  margin: 10px 0;
+  color: #fff;
+  font-size: clamp(38px, 4.5vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+  font-weight: 500;
+}
+
+.destination-page .state-hero h2 strong {
+  font-weight: 850;
+}
+
+.destination-page .state-hero p {
+  max-width: 700px;
+  margin: 0;
+  color: rgba(255, 255, 255, .84);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.destination-page .state-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.destination-page .state-meta span {
+  padding: 8px 13px;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .09);
+  color: #fff;
+  font-size: 12px;
+}
+
+/* =========================================================
+   QUICK SEARCH
+   IMPORTANT: SearchBar is a separate component.
+   The actual component uses .component-search-bar,
+   .component-search-input and .component-search-button.
+   ========================================================= */
+
+.destination-page .destination-quick-search {
+  position: relative;
+  z-index: 20;
+  width: calc(100% - 64px);
+  margin: -38px auto 0;
+  padding: 10px;
+  border: 1px solid rgba(216, 229, 222, .95);
+  border-radius: 21px;
+  background: rgba(255, 255, 255, .97);
+  box-shadow:
+    0 22px 55px rgba(16, 51, 35, .13),
+    0 5px 18px rgba(16, 51, 35, .05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* SearchBar root */
+.destination-page .destination-quick-search .component-search-bar {
+  width: 100% !important;
+  min-height: 62px !important;
+  height: 62px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 6px !important;
+  margin: 0 !important;
+  border: 1px solid #d7e3dd !important;
+  border-radius: 16px !important;
+  background: #fff !important;
+  box-shadow: 0 4px 15px rgba(20, 55, 39, .04) !important;
+}
+
+/* Support common wrapper names */
+.destination-page .destination-quick-search .component-search-input-wrapper,
+.destination-page .destination-quick-search .search-input-wrapper {
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 50px !important;
+  min-height: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  border: 0 !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  overflow: hidden !important;
+}
+
+/* Search icon */
+.destination-page .destination-quick-search .component-search-icon,
+.destination-page .destination-quick-search .search-icon {
+  flex: 0 0 auto !important;
+  width: 25px !important;
+  margin-left: 12px !important;
+  color: #667a72 !important;
+  font-size: 19px !important;
+  line-height: 1 !important;
+}
+
+/* Actual input */
+.destination-page .destination-quick-search input {
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 50px !important;
+  min-height: 50px !important;
+  margin: 0 !important;
+  padding: 0 15px !important;
+
+  border: 0 !important;
+  outline: none !important;
+  border-radius: 12px !important;
+
+  background: #fff !important;
+  color: #17221f !important;
+
+  font-family: inherit !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+.destination-page .destination-quick-search input::placeholder {
+  color: #96a39e !important;
+  opacity: 1 !important;
+}
+
+.destination-page .destination-quick-search input:focus {
+  border: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove Chrome search clear button */
+.destination-page .destination-quick-search input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+/* Actual SearchBar button */
+.destination-page .destination-quick-search .component-search-button,
+.destination-page .destination-quick-search .search-button,
+.destination-page .destination-quick-search button[type="submit"] {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  min-width: 125px !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin: 0 !important;
+  padding: 0 24px !important;
+
+  border: 0 !important;
+  border-radius: 12px !important;
+
+  background: linear-gradient(135deg, #159447 0%, #087f52 100%) !important;
+  color: #fff !important;
+
+  font-family: inherit !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+
+  cursor: pointer !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+
+  box-shadow: 0 9px 20px rgba(21, 148, 71, .22) !important;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease !important;
+}
+
+.destination-page .destination-quick-search .component-search-button:hover,
+.destination-page .destination-quick-search .search-button:hover,
+.destination-page .destination-quick-search button[type="submit"]:hover {
+  background: linear-gradient(135deg, #107c3a 0%, #066b45 100%) !important;
+  color: #fff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 13px 26px rgba(21, 148, 71, .28) !important;
+}
+
+.destination-page .destination-quick-search .component-search-button:active,
+.destination-page .destination-quick-search .search-button:active,
+.destination-page .destination-quick-search button[type="submit"]:active {
+  transform: translateY(0) !important;
+}
+
+/* Popular suggestions */
+.destination-page .destination-search-suggestions {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-top: 14px !important;
+  padding: 0 4px 2px !important;
+}
+
+.destination-page .destination-search-suggestions > span {
+  color: #71817a !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+
+.destination-page .destination-search-suggestions button {
+  width: auto !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 36px !important;
+  margin: 0 !important;
+  padding: 7px 14px !important;
+
+  border: 1px solid #dce7e2 !important;
+  border-radius: 999px !important;
+
+  background: #f7faf8 !important;
+  color: #315344 !important;
+
+  font-family: inherit !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+
+  cursor: pointer !important;
+  box-shadow: none !important;
+  transition: .2s ease !important;
+}
+
+.destination-page .destination-search-suggestions button:hover {
+  background: #eaf7ef !important;
+  border-color: #9bcdb0 !important;
+  color: #107c3a !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ---------- Section headings ---------- */
+.destination-page .destination-section,
+.destination-page .location-section {
+  margin-top: 54px;
+}
+
+.destination-page .destination-section h2,
+.destination-page .location-section h2 {
+  color: #18231f;
+}
+
+/* ---------- City cards ---------- */
+.destination-page .city-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.destination-page .city-grid > * {
+  position: relative;
+  min-width: 0;
+  min-height: 185px;
+  overflow: hidden;
+  border: 1px solid #e0e9e4 !important;
+  border-radius: 20px !important;
+  background: linear-gradient(145deg, #fff, #f7faf8) !important;
+  box-shadow: 0 10px 30px rgba(17, 48, 32, .055) !important;
+  transition: .25s ease !important;
+}
+
+.destination-page .city-grid > *::after {
+  content: "→";
+  position: absolute;
+  right: 18px;
+  bottom: 15px;
+  color: #159447;
+  font-size: 18px;
+  font-weight: 900;
+  pointer-events: none;
+}
+
+.destination-page .city-grid > *:hover {
+  transform: translateY(-7px) !important;
+  border-color: #b9d8c5 !important;
+  box-shadow: 0 22px 45px rgba(17, 48, 32, .12) !important;
+}
+
+/* ---------- Places ---------- */
+.destination-page .place-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.destination-page .place-grid > * {
+  min-width: 0;
+  min-height: 150px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e0e9e4 !important;
+  border-radius: 20px !important;
+  background: linear-gradient(145deg, #fff, #f8fbf9) !important;
+  box-shadow: 0 9px 28px rgba(17, 48, 32, .055) !important;
+  transition: .25s ease !important;
+}
+
+.destination-page .place-grid > *:hover {
+  transform: translateY(-6px) !important;
+  border-color: #b9d8c5 !important;
+  box-shadow: 0 22px 48px rgba(17, 48, 32, .13) !important;
+}
+
+/* ---------- Map ---------- */
+.destination-page .map-view,
+.destination-page .map-container,
+.destination-page iframe {
+  width: 100%;
+  min-height: 410px;
+  border: 1px solid #dce7e1;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(17, 48, 32, .10);
+}
+
+/* ---------- Location ---------- */
+.destination-page .location-card {
+  border: 1px solid #dfe8e3;
+  border-radius: 20px;
+  padding: 24px;
+  background: linear-gradient(145deg, #fff, #f8fbf9);
+  box-shadow: 0 12px 32px rgba(17, 48, 32, .065);
+}
+
+/* =====================================================
+   LIVE ROUTING
+===================================================== */
+
+.live-route-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.route-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.route-map-header h3 {
+  margin: 0 0 4px;
+  color: #0f172a;
+}
+
+.route-map-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.route-loading {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #f0fdf4;
+  color: #15803d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.route-error {
+  margin: 12px 20px 0;
+  padding: 10px 12px;
+  border-radius: 9px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 14px;
+}
+
+.route-map {
+  width: 100%;
+}
+
+.route-map .leaflet-container {
+  width: 100%;
+  min-height: 500px;
+}
+
+.route-placeholder {
+  padding: 30px;
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+  background: #f8fafc;
+  text-align: center;
+  color: #64748b;
+}
+
+.route-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #e2e8f0;
+}
+
+.route-info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 20px;
+  border-right: 1px solid #e2e8f0;
+}
+
+.route-info-item:last-child {
+  border-right: 0;
+}
+
+.route-info-item > span {
+  font-size: 24px;
+}
+
+.route-info-item small {
+  display: block;
+  margin-bottom: 3px;
+  color: #64748b;
+}
+
+.route-info-item strong {
+  color: #0f172a;
+  text-transform: capitalize;
+}
+
+/* LIVE USER MARKER */
+
+.live-user-marker,
+.destination-marker {
+  background: transparent;
+  border: 0;
+}
+
+.live-user-marker-inner,
+.destination-marker-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+  font-size: 22px;
+}
+
+@media (max-width: 700px) {
+
+  .route-map-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .route-info {
+    grid-template-columns: 1fr;
+  }
+
+  .route-info-item {
+    border-right: 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .route-info-item:last-child {
+    border-bottom: 0;
+  }
+
+  .route-map .leaflet-container {
+    min-height: 400px;
+  }
+}
+
+/* ---------- Weather ---------- */
+.destination-page .weather-card {
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(21, 148, 71, .10), transparent 25%),
+    linear-gradient(145deg, #fff, #f5faf7);
+  box-shadow: 0 15px 38px rgba(17, 48, 32, .075);
+}
+
+/* ---------- Budget Planner ---------- */
+.destination-page .budget-planner {
+  position: relative;
+  overflow: hidden;
+  padding: 30px !important;
+  border: 1px solid #dce8e1 !important;
+  border-radius: 24px !important;
+  background:
+    radial-gradient(circle at 92% 8%, rgba(21, 148, 71, .14), transparent 25%),
+    linear-gradient(145deg, #fff 0%, #f4faf6 100%) !important;
+  box-shadow: 0 20px 50px rgba(14, 53, 32, .09) !important;
+}
+
+.destination-page .budget-planner::before {
+  content: "₹";
+  position: absolute;
+  right: 28px;
+  bottom: -62px;
+  color: rgba(21, 148, 71, .045);
+  font-size: 190px;
+  line-height: 1;
+  font-weight: 900;
+  pointer-events: none;
+}
+
+.destination-page .budget-grid {
+  position: relative;
+  z-index: 2;
+  gap: 16px !important;
+}
+
+.destination-page .budget-grid label {
+  padding: 15px;
+  border: 1px solid #e1ebe5;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, .78);
+  box-shadow: 0 5px 16px rgba(17, 48, 32, .035);
+}
+
+.destination-page .budget-grid input {
+  width: 100%;
+  margin-top: 5px;
+  height: 46px;
+  padding: 0 12px;
+  border: 1px solid #d6e3db;
+  border-radius: 11px;
+  background: #fff;
+  color: #17221f;
+  font-weight: 650;
+  outline: none;
+}
+
+.destination-page .budget-planner .primary-component-button {
+  position: relative;
+  z-index: 2;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #159447, #0b7035);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* ---------- Trip Planner ---------- */
+.destination-page .trip-planner-component {
+  position: relative;
+  overflow: hidden;
+  padding: 30px !important;
+  border: 1px solid #dce8e1 !important;
+  border-radius: 24px !important;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(21, 148, 71, .11), transparent 28%),
+    linear-gradient(145deg, #fff, #f6faf8) !important;
+  box-shadow: 0 20px 50px rgba(14, 53, 32, .085) !important;
+}
+
+.destination-page .trip-planner-component h2 {
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+  font-size: 27px !important;
+}
+
+.destination-page .trip-planner-row {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px !important;
+}
+
+.destination-page .trip-planner-component label {
+  padding: 15px;
+  border: 1px solid #e1ebe5;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, .80);
+}
+
+.destination-page .trip-planner-component input {
+  width: 100%;
+  margin-top: 5px;
+  height: 46px;
+  padding: 0 12px;
+  border: 1px solid #d6e3db;
+  border-radius: 11px;
+  background: #fff;
+  color: #17221f;
+  outline: none;
+}
+
+.destination-page .trip-planner-component > button {
+  position: relative;
+  z-index: 2;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #159447, #0b7035);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* =====================================================
+   REVIEWS & FEEDBACK
+===================================================== */
+
+.reviews-section {
+  margin-top: 24px;
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.reviews-header h3,
+.website-feedback h3 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.reviews-header p,
+.website-feedback p {
+  margin: 0;
+  color: #64748b;
+}
+
+.reviews-summary {
+  min-width: 150px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.reviews-summary strong {
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.reviews-summary span {
+  display: block;
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.review-stars {
+  display: flex;
+  gap: 3px;
+}
+
+.star {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-size: 19px;
+  color: #cbd5e1;
+}
+
+.star.active {
+  color: #f59e0b;
+}
+
+button.star {
+  cursor: default;
+}
+
+.review-form-card {
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.review-form-card h4,
+.reviews-list h4 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.review-form-card label {
+  display: block;
+  margin: 14px 0 7px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.review-form-card textarea,
+.feedback-field textarea,
+.feedback-field select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 12px;
+  font: inherit;
+  outline: none;
+}
+
+.review-form-card textarea:focus,
+.feedback-field textarea:focus,
+.feedback-field select:focus {
+  border-color: #22c55e;
+}
+
+.review-form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.review-form-footer span,
+.feedback-field small {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.review-form-footer button,
+.feedback-submit {
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 18px;
+  background: #16a34a;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.review-form-footer button:disabled,
+.feedback-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.review-login-message,
+.feedback-login {
+  padding: 14px;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #64748b;
+}
+
+.review-success,
+.feedback-success {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.review-error,
+.feedback-error {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.reviews-list {
+  margin-top: 24px;
+}
+
+.review-item {
+  padding: 20px;
+  margin-bottom: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.review-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.review-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #dcfce7;
+  color: #15803d;
+  font-weight: 700;
+}
+
+.review-user strong,
+.review-user small {
+  display: block;
+}
+
+.review-user small {
+  margin-top: 3px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.review-comment {
+  margin: 14px 0 0;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.reviews-empty {
+  padding: 28px;
+  text-align: center;
+  border: 1px dashed #cbd5e1;
+  border-radius: 14px;
+  color: #64748b;
+}
+
+.reviews-empty span {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.reviews-empty strong {
+  display: block;
+  color: #334155;
+}
+
+.reviews-empty p {
+  margin: 5px 0 0;
+}
+
+.review-no-place {
+  padding: 20px;
+  border-radius: 14px;
+  background: #f8fafc;
+  color: #64748b;
+}
+
+/* =====================================================
+   WEBSITE FEEDBACK
+===================================================== */
+
+.website-feedback {
+  margin-top: 28px;
+  padding: 26px;
+  border-radius: 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.feedback-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #16a34a;
+}
+
+.feedback-form {
+  margin-top: 22px;
+}
+
+.feedback-rating label,
+.feedback-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.feedback-stars {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.feedback-star {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-size: 30px;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+.feedback-star.active {
+  color: #f59e0b;
+}
+
+.feedback-field {
+  margin-top: 16px;
+}
+
+.feedback-field small {
+  display: block;
+  margin-top: 5px;
+}
+
+.feedback-submit {
+  margin-top: 18px;
+}
+
+@media (max-width: 700px) {
+  .reviews-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reviews-summary {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .review-item-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .review-form-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ---------- AI Assistant ---------- */
+.destination-page .chatbot {
+  width: min(900px, 100%) !important;
+  overflow: hidden;
+  border: 1px solid #dce8e1 !important;
+  border-radius: 24px !important;
+  box-shadow: 0 22px 60px rgba(10, 42, 26, .12) !important;
+}
+
+.destination-page .chatbot-header {
+  min-height: 76px;
+  padding: 16px 21px !important;
+  background:
+    radial-gradient(circle at 88% 20%, rgba(74, 196, 119, .24), transparent 25%),
+    linear-gradient(135deg, #062b1d, #0d7135) !important;
+}
+
+.destination-page .chatbot-messages {
+  height: 330px !important;
+  padding: 22px !important;
+  background:
+    radial-gradient(circle at 8% 8%, rgba(21, 148, 71, .045), transparent 25%),
+    linear-gradient(180deg, #f7faf8, #f3f7f5) !important;
+}
+
+.destination-page .chat-message {
+  max-width: min(76%, 580px);
+  padding: 12px 15px;
+  border-radius: 16px;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.destination-page .chatbot-input {
+  padding: 14px !important;
+  background: #fff;
+}
+
+.destination-page .chatbot-input input {
+  height: 47px !important;
+  border: 1px solid #d7e3dc !important;
+  border-radius: 12px !important;
+}
+
+.destination-page .chatbot-input button {
+  min-width: 82px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #159447, #0d7135);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* ---------- Footer ---------- */
+.destination-page .destination-footer {
+  margin-top: 55px;
+  padding: 26px 10px 10px;
+  border-top: 1px solid #dfe7e3;
+  text-align: center;
+  color: #82908a;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1150px) {
+  .destination-page .destination-main {
+    width: min(100% - 40px, 1100px);
+  }
+
+  .destination-page .city-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .destination-page .place-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 850px) {
+  .destination-page .destination-component-header {
+    padding: 10px 20px;
+  }
+
+  .destination-page .destination-main {
+    width: calc(100% - 32px);
+    padding-top: 28px;
+  }
+
+  .destination-page .state-hero {
+    min-height: 245px;
+    padding: 34px 28px;
+  }
+
+  .destination-page .destination-quick-search {
+    width: 100%;
+    margin-top: -24px;
+  }
+
+  .destination-page .city-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .destination-page .budget-planner,
+  .destination-page .trip-planner-component {
+    padding: 22px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .destination-page .destination-component-header {
+    min-height: 68px;
+    padding: 9px 12px;
+  }
+
+  .destination-page .destination-component-header h1 {
+    font-size: 18px;
+  }
+
+  .destination-page .back-button {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  .destination-page .destination-main {
+    width: calc(100% - 24px);
+    padding-top: 18px;
+  }
+
+  .destination-page .state-hero {
+    min-height: 235px;
+    padding: 30px 22px;
+    border-radius: 19px;
+  }
+
+  .destination-page .state-hero h2 {
+    font-size: 34px;
+  }
+
+  .destination-page .state-hero::after {
+    right: 18px;
+    font-size: 52px;
+  }
+
+  .destination-page .destination-quick-search {
+    width: 100%;
+    margin-top: -18px;
+    padding: 8px;
+  }
+
+  .destination-page .destination-quick-search .component-search-bar {
+    height: auto !important;
+    min-height: 0 !important;
+    flex-wrap: wrap !important;
+  }
+
+  .destination-page .destination-quick-search .component-search-input-wrapper,
+  .destination-page .destination-quick-search .search-input-wrapper {
+    width: 100% !important;
+    flex-basis: 100% !important;
+  }
+
+  .destination-page .destination-quick-search .component-search-button,
+  .destination-page .destination-quick-search .search-button,
+  .destination-page .destination-quick-search button[type="submit"] {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  .destination-page .city-grid,
+  .destination-page .place-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-page .trip-planner-row {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-page .budget-planner .component-section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .destination-page .budget-planner .component-section-heading > strong {
+    width: 100%;
+  }
+
+  .destination-page .chat-message {
+    max-width: 88%;
+  }
+}
+
+
