@@ -1,1 +1,11 @@
+title: BharatYatra
+description: AI-Based Indian Tourism Platform
 
+exclude:
+  - backend/node_modules
+  - frontend/node_modules
+  - node_modules
+  - backend
+  - .env
+  - .gitignore
+  - package-lock.json
