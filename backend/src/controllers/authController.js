@@ -1,6 +1,7 @@
 import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import env from "../config/env.js";
 import fs from "fs";
 import path from "path";
 
@@ -150,7 +151,7 @@ export const loginUser = async (req, res) => {
           user.email,
       },
 
-      process.env.JWT_SECRET,
+      env.jwtSecret,
 
       {
         expiresIn: "7d",

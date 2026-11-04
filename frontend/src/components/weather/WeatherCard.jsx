@@ -17,7 +17,7 @@ function WeatherCard({ latitude, longitude, locationName = "Destination" }) {
         setError("");
 
         const response = await fetch(
-          `http://localhost:5000/api/weather?lat=${encodeURIComponent(
+          `${import.meta.env.VITE_API_URL}/api/weather?lat=${encodeURIComponent(
             latitude
           )}&lon=${encodeURIComponent(longitude)}`
         );

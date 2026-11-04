@@ -44,7 +44,7 @@ function Dashboard() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/search?query=${encodeURIComponent(cleanQuery)}`
+        `${import.meta.env.VITE_API_URL}/api/search?query=${encodeURIComponent(cleanQuery)}`
       );
 
       const data = await response.json();
@@ -116,7 +116,7 @@ function Dashboard() {
 
       try {
         const response = await fetch(
-          "http://localhost:5000/api/auth/me",
+          `${import.meta.env.VITE_API_URL}/api/auth/me`,
           {
             method: "GET",
 
@@ -282,7 +282,7 @@ function Dashboard() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/profile",
+        `${import.meta.env.VITE_API_URL}/api/auth/profile`,
         {
           method: "PUT",
 
@@ -403,7 +403,7 @@ function Dashboard() {
       );
 
       const response = await fetch(
-        "http://localhost:5000/api/auth/profile-image",
+        `${import.meta.env.VITE_API_URL}/api/auth/profile-image`,
         {
           method: "PUT",
 
@@ -487,7 +487,7 @@ function Dashboard() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/delete-account",
+        `${import.meta.env.VITE_API_URL}/api/auth/delete-account`,
         {
           method: "DELETE",
 
@@ -535,7 +535,7 @@ function Dashboard() {
           "http"
         )
         ? user.profileImage
-        : `http://localhost:5000${user.profileImage}`
+        : `${import.meta.env.VITE_API_URL}${user.profileImage}`
       : null;
 
 

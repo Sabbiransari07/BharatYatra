@@ -26,7 +26,7 @@ import WebsiteFeedback from "../components/rating/WebsiteFeedback";
 
 import LiveRouteMap from "../components/map/LiveRouteMap";
 
-const API = "http://localhost:5000";
+const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const suggestions = [
   "Uttar Pradesh",
