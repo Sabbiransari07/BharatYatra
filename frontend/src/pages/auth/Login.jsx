@@ -20,14 +20,13 @@ const [error, setError] = useState("");
 const handleChange = (event) => {
 const { name, value } = event.target;
 
-```
+
 setFormData((previous) => ({
   ...previous,
   [name]: value,
 }));
 
 setError("");
-```
 
 };
 
@@ -36,7 +35,7 @@ const handleSubmit = async (event) => {
 event.preventDefault();
 setError("");
 
-```
+
 if (!formData.email.trim() || !formData.password) {
   setError("Please enter your email and password.");
   return;
@@ -99,7 +98,7 @@ try {
 } finally {
   setLoading(false);
 }
-```
+
 
 };
 
@@ -119,7 +118,7 @@ alert(
 
 return ( <div className="auth-page">
 
-```
+
   {/* Background Overlay */}
   <div className="auth-background-overlay"></div>
 

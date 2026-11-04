@@ -48,12 +48,12 @@ data?.error ||
 `API request failed with status ${response.status}`
 );
 
-```
+
 error.status = response.status;
 error.data = data;
 
 throw error;
-```
+
 
 }
 

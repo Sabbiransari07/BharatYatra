@@ -566,7 +566,7 @@ function Dashboard() {
 
           <button
             type="button"
-            className={`nav-item ${activeNav === "dashboard" ? "active" : ""}`}
+            className={'nav-item ${activeNav === "dashboard" ? "active" : ""}'}
             onClick={() => setActiveNav("dashboard")}
           >
             <span className="nav-icon">⌂</span>
@@ -575,7 +575,7 @@ function Dashboard() {
 
           <button
             type="button"
-            className={`nav-item ${activeNav === "trips" ? "active" : ""}`}
+            className={'nav-item ${activeNav === "trips" ? "active" : ""}'}
             onClick={() => setActiveNav("trips")}
           >
             <span className="nav-icon">▣</span>
@@ -584,7 +584,7 @@ function Dashboard() {
 
           <button
             type="button"
-            className={`nav-item ${activeNav === "saved" ? "active" : ""}`}
+            className={'nav-item ${activeNav === "saved" ? "active" : ""}'}
             onClick={() => setActiveNav("saved")}
           >
             <span className="nav-icon">♡</span>
@@ -593,7 +593,7 @@ function Dashboard() {
 
           <button
             type="button"
-            className={`nav-item ${activeNav === "messages" ? "active" : ""}`}
+            className={'nav-item ${activeNav === "messages" ? "active" : ""}'}
             onClick={() => setActiveNav("messages")}
           >
             <span className="nav-icon">◌</span>
@@ -602,7 +602,7 @@ function Dashboard() {
 
           <button
             type="button"
-            className={`nav-item ${activeNav === "profile" ? "active" : ""}`}
+            className={'nav-item ${activeNav === "profile" ? "active" : ""}'}
             onClick={openProfile}
           >
             <span className="nav-icon">♙</span>
